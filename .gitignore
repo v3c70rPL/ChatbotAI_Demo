@@ -1,0 +1,70 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Node dependencies
+/node_modules/
+
+# Angular build output
+/dist/
+tmp/
+out-tsc/
+
+# Compiled files
+*.js
+*.js.map
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environment files (avoid committing sensitive configurations)
+src/environments/environment*.ts
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Bower components directory (if used)
+/bower_components/
+
+
+# Build artifacts
+bin/
+obj/
+
+# Visual Studio specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# .NET Core specific files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Package directories
+*.nupkg
+packages/
+
+# Rider IDE
+.idea/
+
+# Visual Studio Code settings
+.vscode/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

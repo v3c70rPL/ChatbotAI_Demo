@@ -1,0 +1,35 @@
+<mat-card class="chat-container">
+  <mat-card-title>Welcome to Chatbot AI Demo</mat-card-title>
+  <mat-card-content>
+    <div #scrollContainer class="chat-history">
+      <div *ngFor="let msg of messagesDisplay" class="message">
+        <div class="user-message">
+          <strong>You:</strong> {{ msg.userMessage }}
+        </div>
+        <div class="bot-message">
+          <strong>Assistant:</strong> {{ msg.botResponseDisplayedText }}
+        </div>
+        <div class="rating-buttons">
+          <button mat-icon-button (click)="rateAnswer(msg.id, 1)" [class.fade]="msg.rating === -1">
+            <mat-icon>thumb_up</mat-icon>
+          </button>
+          <button mat-icon-button (click)="rateAnswer(msg.id, -1)" [class.fade]="msg.rating === 1">
+            <mat-icon>thumb_down</mat-icon>
+          </button>
+          <button mat-icon-button (click)="onStopPrintAnswer(msg)">
+            <mat-icon>stop</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <mat-form-field class="full-width">
+      <mat-label>Type your message...</mat-label>
+      <input matInput [(ngModel)]="userMessage" matTooltip="Ask me anything ..."/>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="sendMessage()">
+      Send
+    </button>
+  </mat-card-content>
+</mat-card>
